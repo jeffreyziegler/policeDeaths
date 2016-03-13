@@ -1,9 +1,13 @@
-# load library and data
+# load libraries
 library(shiny)
 library(plyr)
 library(maps)
 library(ggplot2)
 library(R.utils)
+
+# load data
+census <- read.csv("census_data.csv", header=TRUE)
+death <- read.csv("death_count.csv", header=TRUE)
 
 # create map
 map <- map_data("county")
